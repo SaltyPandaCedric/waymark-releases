@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waymark downloads</title>
+<meta name="description" content="Download Waymark, a companion app for World of Warcraft: Forever, for Windows and Linux.">
+<!-- Filled in by the publish job in GitLab CI: 0.1.0, 8 November 2026, 117 MB, 122 MB, SaltyPandaCedric/waymark-releases. -->
+<style>
+@font-face { font-family: Lato; font-weight: 400; font-display: swap; src: url(fonts/lato-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: Lato; font-weight: 700; font-display: swap; src: url(fonts/lato-latin-700-normal.woff2) format('woff2'); }
+@font-face { font-family: Lato; font-weight: 900; font-display: swap; src: url(fonts/lato-latin-900-normal.woff2) format('woff2'); }
+:root {
+  --bg: #111111; --surface: #1c1c1c; --line: #2a2a2a; --line-strong: #4a4a4a;
+  --text: #ffffff; --text-2: #c9c9c9; --text-3: #9a9a9a;
+  --accent: #e14c4e; --accent-2: #c93a3c; --link: #ef9091; --link-hover: #f6bbbc;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font: 16px/1.55 Lato, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+main { max-width: 880px; margin: 0 auto; padding: 48px 16px 64px; display: flex; flex-direction: column; gap: 32px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 44px; height: 44px; border-radius: 12px; background: var(--accent); border: 2px solid #fff; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.wordmark { font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; font-size: 20px; }
+h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.1; font-weight: 900; margin: 0; }
+.lead { color: var(--text-2); font-size: 18px; margin: 12px 0 0; max-width: 620px; }
+.meta { color: var(--text-3); font-size: 14px; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.card.mine { border-color: var(--accent); }
+.card h2 { margin: 0; font-size: 22px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
+.chip { font-size: 12px; font-weight: 700; color: var(--text); background: var(--accent); border-radius: 999px; padding: 2px 10px; display: none; }
+.card.mine .chip { display: inline-block; }
+.card p { margin: 0; color: var(--text-2); font-size: 15px; }
+.btn { min-height: 48px; padding: 0 20px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; align-self: flex-start; }
+.btn:hover { background: var(--accent-2); color: #fff; }
+.file { font-size: 13px; color: var(--text-3); overflow-wrap: anywhere; }
+.steps { margin: 0; padding-left: 20px; color: var(--text-2); font-size: 15px; display: flex; flex-direction: column; gap: 6px; }
+code { font-family: ui-monospace, Consolas, 'Cascadia Mono', monospace; font-size: 0.9em; background: #0b0b0b; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--text); white-space: nowrap; }
+section > h2 { font-size: 22px; font-weight: 900; margin: 0 0 12px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.facts li { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--text-2); font-size: 15px; }
+.facts strong { display: block; color: var(--text); margin-bottom: 2px; }
+footer { border-top: 1px solid var(--line); padding-top: 20px; color: var(--text-3); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7-3 13-3-13z"/><circle cx="12" cy="9" r="1.5"/></svg>
+      </span>
+      <span class="wordmark">Waymark</span>
+    </div>
+  </header>
+
+  <div>
+    <h1>A companion app for World of Warcraft: Forever</h1>
+    <p class="lead">Waymark runs next to the game and shows live data from it. It installs its own addon and keeps itself up to date.</p>
+  </div>
+
+  <div>
+    <p class="meta">Version 0.1.0 · released 8 November 2026 · <a href="https://github.com/SaltyPandaCedric/waymark-releases/releases/tag/v0.1.0">release notes and all files</a></p>
+  </div>
+
+  <div class="grid">
+    <article class="card" id="windows">
+      <h2>Windows <span class="chip">Your system</span></h2>
+      <p>For Windows 10 and 11, 64-bit. Installs for your user only, no admin rights needed.</p>
+      <a class="btn" href="https://github.com/SaltyPandaCedric/waymark-releases/releases/download/v0.1.0/Waymark-Setup-0.1.0.exe">Download for Windows</a>
+      <span class="file">Waymark-Setup-0.1.0.exe · 117 MB</span>
+      <ol class="steps">
+        <li>Run the installer.</li>
+        <li>If Windows says "Windows protected your PC", choose "More info", then "Run anyway". Waymark isn't code signed yet. Updates don't show this again.</li>
+      </ol>
+    </article>
+
+    <article class="card" id="linux">
+      <h2>Linux and Steam Deck <span class="chip">Your system</span></h2>
+      <p>An AppImage for 64-bit Linux. Runs on most distributions and in the Steam Deck's desktop mode.</p>
+      <a class="btn" href="https://github.com/SaltyPandaCedric/waymark-releases/releases/download/v0.1.0/Waymark-0.1.0-x86_64.AppImage">Download for Linux</a>
+      <span class="file">Waymark-0.1.0-x86_64.AppImage · 122 MB</span>
+      <ol class="steps">
+        <li>Mark the file as executable: <code>chmod +x Waymark-*.AppImage</code>, or Properties &gt; Permissions in your file manager.</li>
+        <li>Start it. Keep it in a folder you can write to, so it can update itself.</li>
+      </ol>
+    </article>
+  </div>
+
+  <section>
+    <h2>Good to know</h2>
+    <ul class="facts">
+      <li><strong>Updates itself</strong>Installed apps download new versions in the background and update the addon with them.</li>
+      <li><strong>Reads, never writes</strong>Waymark only reads the game's log file. It never sends anything into the game.</li>
+      <li><strong>Works without a server</strong>Your own characters work right away. A server is only needed to see friends' characters.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Waymark is a fan project and not affiliated with Blizzard Entertainment.</span>
+    <a href="https://github.com/SaltyPandaCedric/waymark-releases/releases">All releases</a>
+    <a href="fonts/OFL.txt">Font license</a>
+  </footer>
+</main>
+<script>
+  // Highlights the download for the visitor's system. The page works the same without it.
+  (function () {
+    var ua = navigator.userAgent || '';
+    var id = /Windows/i.test(ua) ? 'windows' : /Linux|X11|CrOS/i.test(ua) && !/Android/i.test(ua) ? 'linux' : null;
+    if (id) document.getElementById(id).classList.add('mine');
+  })();
+</script>
+</body>
+</html>
